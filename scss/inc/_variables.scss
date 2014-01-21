@@ -1,0 +1,48 @@
+/*==================================================*/
+/*  VARS
+/*==================================================*/
+
+
+/* Base Fonts */
+$font-family-alpha: 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+/* Colour Palette */
+$black:				#000;
+$gold:				#f4db78;
+$light-green:		#8dc3ac;
+$green:				#55957a;
+$orange:			#ff4301;
+$white:				#fff;
+
+$lightest-grey:		#eeeef0;
+$lighter-grey:		#909096;
+$light-grey:		#696767;
+$grey:				#5a5a62;
+$medium-grey:		#494848;
+$dark-grey:			#393943;
+$darker-grey:		#3e3e3e;
+$darkest-grey:		#2b2828;
+
+
+/* Site Options */
+$gutter-width: 20px; 		/* The spacing between columns within the site structure */
+$max-page-width: 1024px;	/* The maximum width of the website */
+
+
+/* Vendor prefix */
+@mixin vendor($property, $value...){
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+}
+
+/* Text Shadow - No webkit property */
+@mixin text-shadow($property, $value...){
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+}

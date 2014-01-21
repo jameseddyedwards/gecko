@@ -1,0 +1,111 @@
+@import 'inc/variables';
+
+/* =============================================================================
+   Header Bar
+   ========================================================================== */
+
+header.bar {
+	background-color:$light-green;
+
+	.logo {
+		float:left;
+	}
+
+	a {
+		color:$white;
+		padding:10px;
+
+		&:hover {
+			color:$darkest-grey;
+		}
+	}
+
+	.col {
+		text-align:right;
+
+		nav {
+			float:right;
+			a {
+				font-size:11px;
+				font-weight:400;
+				line-height:19px;
+				text-transform:uppercase;
+			}
+		}
+
+		.contact-details {
+			float:right;
+			margin-left:20px;
+
+
+			a[href^="callto:"] {
+				padding-right:0;
+
+				&:before {
+					line-height:13px;
+				}
+			}
+		}
+	}
+}
+
+header.menu {
+	background-color:$white;
+	border-bottom:1px solid $lightest-grey;
+	padding:10px 0;
+
+	.logo {
+		float:left;
+		margin:0;
+		padding:0;
+
+		img {
+			float:left;
+		}
+
+		span {
+			color:$darkest-grey;
+			float:left;
+			font-size:20px;
+			line-height:20px;
+			margin-top:15px;
+		}
+	}
+
+	nav {
+		ul {
+			display:inline-block;
+			float:right;
+
+			li {
+				a {
+					color:$darkest-grey;
+					font-size:14px;
+					padding:5px 20px;
+					margin:11px 0 0 5px;
+					
+					&:hover {
+						color:$orange;
+					}
+				}
+				&.current-menu-item {
+					a {
+						background:$orange;
+						color:$white;
+						@include vendor(border-radius, 3px);
+					}
+				}
+				&:last-child {
+					a {
+						padding-right:0;
+					}
+					&.current-menu-item {
+						a {
+							padding-right:20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
